@@ -31,7 +31,7 @@ pipeline {
                 bat 'docker rm -f eurekabook-container || true'
                 bat 'docker rmi -f eurekabook-image || true'
                 bat 'docker build -t eurekabook-image .'
-                bat 'docker run --network eureka-network -p 8761:8761 -d --name eurekabook-container eurekabook-image'
+                bat 'docker run --network eurekabook-network -p 8761:8761 -d --name eurekabook-container eurekabook-image'
             }
         }
     }
